@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background-color: #090b1a;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 30px;
+}
+
+.card {
+  height: 450px;
+  width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  height: 100%;
+  width: 50%;
+  background-color: #1b1938;
+  padding: 60px 80px;
+}
+
+.card-body .card-content {
+  height: 100%;
+  width: 80%;
+}
+
+.card-body p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 80px;
+}
+
+.card-body-upper h1 {
+  margin-bottom: 30px;
+}
+
+.card-body-upper h1 span {
+  color: #aa5cdb;
+}
+
+.stats {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stats div {
+  margin-right: 70px;
+}
+
+.stats p {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+}
+
+.stats h2 {
+  font-weight: 700;
+}
+
+.img {
+  position: relative;
+  z-index: 4;
+  background-image: url("/stats-preview-card-component-main/images/image-header-desktop.jpg");
+  background-size: cover;
+  background-color: #aa5cdb;
+  height: 100%;
+  width: 50%;
+}
+
+.img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #aa5cdb;
+  opacity: 0.45;
+}
+
+@media (max-width: 1105px) {
+  body {
+    height: 120vh;
+  }
+  .card {
+    height: 90%;
+    width: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+  }
+  .card-body {
+    height: 600px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .card-body .card-content {
+    width: 100%;
+    text-align: center;
+  }
+  .card-body p {
+    margin-bottom: 20px;
+  }
+  .card-body-upper h1 {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .stats {
+    margin: 40px 0 40px 0;
+    display: block;
+  }
+  .stats div {
+    margin-right: 0;
+  }
+  .img {
+    background-image: url("/stats-preview-card-component-main/images/image-header-mobile.jpg");
+    height: 450px;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

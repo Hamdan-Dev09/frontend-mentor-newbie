@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Brigh-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-size: 13px;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 70px 30px;
+    background-color: $Pale-blue;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+}
+.card{
+    width: 350px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.main-img{
+    width: 100%;
+}
+.card-content{
+    padding: 30px;
+}
+.card-text-area{
+    margin-bottom: 30px;
+    & h2{
+        font-weight: 900;
+        margin-bottom: 20px;
+        color: $Dark-blue;
+    }
+    & p{
+        color: $Desaturated-blue;
+        font-weight: 300;
+    }
+}
+.subscription{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $Very-pale-blue;
+    border-radius: 12px;
+    padding: 15px 10px;
+    margin-bottom: 30px;
+
+    & a{
+        text-decoration: underline;
+        font-weight: 900;
+    }
+
+    & a:hover{
+        text-decoration: none;
+        opacity: 0.6;
+    }
+}
+.subscription-text-area{
+    display: flex;
+    justify-content: space-between;
+
+    & img{
+        height: 48px;
+        margin: 0 10px;
+    }
+    & p{
+        font-size: 15px;
+        font-weight: 900;
+        color: $Dark-blue;
+    }
+    & span{
+        display: block;
+        color: $Desaturated-blue;
+        font-weight: 300;
+        margin-top: -2px;
+    }
+}
+.proceed-btn{
+    display: block;
+    color: #fff;
+    font-weight: 900;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    background-color: $Brigh-blue;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 1px 2px 15px $Desaturated-blue;
+    margin-bottom: 20px;
+
+    &:hover{
+        opacity: 0.6;
+    }
+}
+.cancel-order-btn{
+    font-size: 15px;
+    font-weight: 900;
+    color: $Desaturated-blue;
+
+    &:hover{
+        color: $Dark-blue;
+    }
+}

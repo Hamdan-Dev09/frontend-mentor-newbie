@@ -1,0 +1,88 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);   //paragraphs
+$very-light-grey: hsl(0, 0%, 95%);    //backgroung, heading, button.
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px 20px;
+    background-color: rgb(233, 227, 227);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card{
+    padding: 40px 40px 40px 40px;
+    width: 310px;
+}
+.card-1{
+    background-color: $bright-orange;
+    & .btn{
+        color: $bright-orange;
+    }
+}
+.card-2{
+    background-color: $dark-cyan;
+    & .btn{
+        color: $dark-cyan;
+    }
+}
+.card-3{
+    background-color: $very-dark-cyan;
+    & .btn{
+        color: $very-dark-cyan;
+    }
+}
+.heading{
+    display: block;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 36px;
+    color: $very-light-grey;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: $transparent-white;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    background-color: $very-light-grey;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 12px 40px;
+    border: 3px solid $very-light-grey;
+    border-radius: 30px;
+    transition: all 0.5s;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+    &:hover{
+        background-color: unset;
+        color: $very-light-grey;
+    }
+}
+
+@media (min-width: 1100px){
+    .container{
+        flex-direction: row;
+    }
+}

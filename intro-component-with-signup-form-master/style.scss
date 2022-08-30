@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$Red: hsl(0, 100%, 74%); 
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$Dark-Blue: hsl(249, 10%, 26%); 
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: $Red;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:multiply;
+    padding: 100px 30px;
+    min-height: 100vh;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+.text-container{
+    height: 100%;
+}
+.text-content{
+    text-align: center;
+    max-width: 500px;
+
+    & h1{
+        color: #fff;
+        margin-bottom: 30px;  
+    }
+    & p{
+        color: #fff;
+        margin-bottom: 60px;
+    }
+}
+.form-container{
+    max-width: 500px;
+}
+.subscription-plan{
+    width: 100%;
+    text-align: center;
+    background-color: $Blue;
+    padding: 18px 80px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 0px rgb(231, 113, 113);
+
+    & p{
+        font-weight: 600;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    & span{
+        font-weight: 400;
+        margin-left: 5px;
+    }
+}
+
+.form-area{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 0px rgb(231, 113, 113);
+
+    & .input-div{
+        text-align: right;
+        position: relative;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+
+        & p{
+            position: absolute;
+            right: 0;
+            display: none;
+            color: $Red;
+            margin-top: 5px;
+        }
+        & img{
+            width: 20px;
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: 30px;
+        }
+    }
+    & input{
+        display: block;
+        width: 100%;
+        padding: 15px 0 15px 30px;
+        border-radius: 5px;
+        border: 1px solid $Grayish-Blue;
+        outline: none;
+        color: $Dark-Blue;
+        font-weight: 600;
+        font-size: 12px;
+        // position: relative;
+
+        &::placeholder{
+            color: $Dark-Blue;
+            font-weight: 600;
+        }
+    }
+
+    & #btn{
+        background-color: $Green;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding-left: 0;
+        cursor: pointer;
+        box-shadow: 0 3px 0px hsl(154, 54%, 48%);
+        font-size: 14px;
+        margin-bottom: 18px;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    & p{
+        color: $Grayish-Blue;
+        font-size: 11px;
+        padding: 0 10px;
+    }
+    & span{
+        color: $Red;
+        font-weight: 700;
+    }
+
+    & h4{
+        color: rgb(33, 226, 33);
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 2px;
+
+    }
+}
+
+.form-area .error p,  .form-area .error img{
+    display: block;
+}
+.form-area .error input{
+    border: 3px solid $Red;
+}
+
+@media(min-width: 1000px){
+    body{
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+    .main-container{
+        flex-direction: row;
+    }
+    .text-container{
+        width: 50%;
+    }
+    .text-content{
+        text-align: start;
+        max-width: 450px;
+
+        & h1{
+            font-size: 40px;
+            line-height: 1.2;
+        }
+        & p{
+            margin-bottom: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+    }
+    .form-container{
+        width: 50%;
+    }
+}

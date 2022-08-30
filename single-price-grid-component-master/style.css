@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  padding: 80px 30px;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #e5eff5;
+}
+
+.container {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  background-color: #fff;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  color: #2ab2af;
+}
+
+.intro h2 {
+  font-size: 17px;
+  color: #c0df34;
+  margin-bottom: 20px;
+}
+
+.para-1 {
+  color: #98a6bd;
+}
+
+.container-inner h1 {
+  color: #e5eff5;
+}
+
+.subscription {
+  background-color: #2ca09e;
+  padding: 30px;
+}
+
+span {
+  font-size: 40px;
+  color: #e5eff5;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+span2 {
+  position: relative;
+  bottom: 5px;
+  font-size: 18px;
+}
+
+.para-2 {
+  font-size: 18px;
+  color: #e5eff5;
+  margin-bottom: 25px;
+}
+
+.btn {
+  font-size: 18px;
+  text-decoration: none;
+  color: #e5eff5;
+  display: inline-block;
+  width: 100%;
+  background-color: #c0df34;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 8px 18px #196c6b;
+          box-shadow: 2px 8px 18px #196c6b;
+}
+
+.about-us {
+  background-color: #2ab2af;
+  padding: 30px;
+}
+
+.about-us-inner {
+  width: 230px;
+}
+
+.about-us .para-1 {
+  color: #d8dfe4;
+}
+
+@media (min-width: 650px) {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .subscription {
+    width: 100%;
+  }
+  .about-us {
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: 40px;
+}
+/*# sourceMappingURL=style.css.map */

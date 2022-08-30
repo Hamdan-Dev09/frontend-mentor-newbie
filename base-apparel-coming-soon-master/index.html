@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;margin: 0 3px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./images/logo.svg" alt="" class = "logo">
+    <div class="img-area">
+      <img src="./images/hero-mobile.jpg" alt="" class="mobile-img">
+      <img src="./images/hero-desktop.jpg" alt="" class="desktop-img">
+    </div>
+    <div class="page-content">
+      <img src="./images/logo.svg" alt="" class = "logo">
+      <h1>
+        <span>We're</span><br>
+        coming<br>soon
+      </h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form class="input-area" id="form">
+        <input type="text" placeholder="Email Address" id = "input">
+        <div class="arrow-img">
+          <img src="./images/icon-arrow.svg" alt="">
+        </div> 
+        <img src="./images/icon-error.svg" alt="" class="error">
+        <span class="error-text">Please provide a valid email</span> 
+      </form>
+        
+    </div>
+  </div>
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Hamdan Zaheer</a>.
+    </p>
+  </footer>
+
+  <script>
+    let active = document.querySelector(".input-area");
+    let btn = document.querySelector(".arrow-img");
+    
+
+    btn.addEventListener("click", function(){
+      let mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+      let email = document.getElementById("input").value;
+      if(email != mailformat){
+        active.classList.add("active");
+      }
+    })
+      
+    
+  </script>
+</body>
+</html>

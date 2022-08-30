@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link rel="stylesheet" href="style-neumorphism.css"> -->
+    <title>Document</title>
+    <style>
+        :root{
+            --bg: #000080;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: var(--bg);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 700px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .clock{
+            width: 120px;
+            padding: 18px;
+            text-align: center;
+            font-size: 70px;
+            font-weight: 600;
+            background-color: var(--bg);
+            color: white;
+            border-radius: 25px;
+            box-shadow: 6px 6px 5px rgba(0,0,0,0.2), -4px -4px 8px rgba(255,255,255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock" id="hour">00</div>
+        <div class="clock" id="minutes">00</div>
+        <div class="clock" id="seconds">00</div>
+    </div>
+
+    <script>
+        
+        let hour, min, sec;
+        hour = document.getElementById("hour");
+        min = document.getElementById("minutes");
+        sec = document.getElementById("seconds");
+
+        function myclock(){
+            let d = new Date();
+            hour.innerHTML = d.getHours();
+            min.innerHTML = d.getMinutes();
+            sec.innerHTML = d.getSeconds();
+
+            if(d.getHours() < 10){
+                hour.innerHTML = "0" + d.getHours();
+            }
+            if(d.getMinutes() < 10){
+                min.innerHTML = "0" + d.getMinutes();
+            }
+            if(d.getSeconds() < 10){
+                sec.innerHTML = "0" + d.getSeconds();
+            }
+        }
+        
+        let myVar = setInterval(myclock, 1000);
+    </script>
+</body>
+</html>
