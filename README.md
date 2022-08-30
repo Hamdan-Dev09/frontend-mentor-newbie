@@ -1,3 +1,3 @@
-# frontend-mentor-newbie
+# Frontend-Mentor-Newbie
 
 > Code for frontend mentor newbie
